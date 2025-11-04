@@ -2,8 +2,8 @@ package cs.nyuad.se.notifications;
 
 public class SMSDecorator extends NotifierDecorator {
 
-    public SMSDecorator(Notifier notifier) {
-        super(notifier);
+    public SMSDecorator(Notifier wrappee) {
+        super(wrappee);
     }
 
     public void sendNotification(String message) {

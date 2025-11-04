@@ -2,8 +2,8 @@ package cs.nyuad.se.notifications;
 
 public class SlackDecorator extends NotifierDecorator {
     
-    public SlackDecorator(Notifier notifier) {
-        super(notifier);
+    public SlackDecorator(Notifier wrappee) {
+        super(wrappee);
     }
 
     public void sendNotification(String message) {

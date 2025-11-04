@@ -2,8 +2,8 @@ package cs.nyuad.se.notifications;
 
 public class FacebookDecorator extends NotifierDecorator {
 
-    public FacebookDecorator(Notifier notifier) {
-        super(notifier);
+    public FacebookDecorator(Notifier wrappee) {
+        super(wrappee);
     }
 
     public void sendNotification(String message) {

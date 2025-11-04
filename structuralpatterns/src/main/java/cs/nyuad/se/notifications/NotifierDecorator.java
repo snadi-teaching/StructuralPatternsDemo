@@ -1,14 +1,15 @@
 package cs.nyuad.se.notifications;
 
 public class NotifierDecorator extends Notifier {
-    private Notifier notifier;
+    private Notifier wrappee;
 
-    public NotifierDecorator(Notifier notifier) {
-        this.notifier = notifier;
+    public NotifierDecorator(Notifier wrappee) {
+        this.wrappee = wrappee;
     }
 
+    @Override
     public void sendNotification(String message) {
-        notifier.sendNotification(message);
+        wrappee.sendNotification(message);
     }
 
 }
